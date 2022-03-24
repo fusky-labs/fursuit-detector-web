@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
     <!-- this html file is used for testing only when CORS is allowed -->
@@ -12,22 +12,22 @@
     <button id="btn">submit</button>
 
     <script>
-        // send input image to the flask server with the fetch function
-        // and get the response back
-        const file = document.getElementById('file');
-        const btn = document.getElementById('btn');
+      // send input image to the flask server with the fetch function
+      // and get the response back
+      const file = document.getElementById('file');
+      const btn = document.getElementById('btn');
 
-        btn.addEventListener('click', function(){
-            const formData = new FormData();
-            formData.append('image', file.files[0]);
+      btn.addEventListener('click', function(){
+          const formData = new FormData();
+          formData.append('image', file.files[0]);
 
-            fetch('http://192.168.1.13:5000/detect', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => console.log(data));
-        });
+          fetch('http://192.168.1.13:5000/detect', {
+              method: 'POST',
+              body: formData
+          })
+          .then(response => response.json())
+          .then(data => console.log(data));
+      });
     </script>
 </body>
 </html>
