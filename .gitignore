@@ -1,5 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+Fursuit-API/tool/__pycache__/
+Fursuit-API/yolov4-pytorch.pth
 *.py[cod]
 *$py.class
 
