@@ -3,13 +3,23 @@ import cv2
 import numpy as np
 import os
 import random
-import string
+import string  
+from tool import darknet2pytorch
+import torch
+from tool.utils import load_class_names, plot_boxes_cv2
+from tool.torch_utils import do_detect
+
 cors_allowed = True
 app = Flask(__name__)
 
 if cors_allowed:
     from flask_cors import CORS
     CORS(app)
+
+# load weights and model from pytorch format and the config from darknet
+model_pt = darknet2pytorch.Darknet('yolov4-obj.cfg', inference=True)
+model_pt.load_state_dict(torch.load('yolov4-pytorch.pth'))
+model_pt.eval()
 
 @app.route('/detect', methods=['POST'])
 def detect():
@@ -18,11 +28,14 @@ def detect():
         image = request.files.get('image')
         image = np.asarray(bytearray(image.read()), dtype="uint8")
         image = cv2.imdecode(image, cv2.IMREAD_COLOR)
+        boxes = do_detect(model_pt, cv2.resize(image, (416, 416)), 0.5, 0.4, use_cuda=False)
+        print(boxes[0])
+        plot_boxes_cv2(image, boxes[0], f'../build/static/{session}.png', class_names=load_class_names('obj.names'))
         print(image.shape)
-        cv2.imwrite(session + '.jpg', image)
         return jsonify({
             "status":"success",
-            "session": session
+            "session": session,
+            "furries": len(boxes[0])
         })
 
 if __name__ == '__main__':
