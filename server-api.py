@@ -38,5 +38,13 @@ def detect():
             "furries": len(boxes[0])
         })
 
+@app.route('/delete/<session>')
+def delete(session):
+    if os.path.exists(f'../build/static/{session}.png'):
+        os.remove(f'../build/static/{session}.png')
+    return jsonify({
+        "status":"success"
+    })
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
