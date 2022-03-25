@@ -2,12 +2,16 @@
 
 Detects fursuits images: basically garbage-in garbage-out kinda thing...
 
-Built using React, Flask, and PyTorch.
-
 ## Project Structure
 
 The project is comprised of both of a Flask app for the back-end and a React
 app for the front-end.
+
+**Technologies used:**
+
+- React
+- PyTorch
+- Flask
 
 ## Installation
 
