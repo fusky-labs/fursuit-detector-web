@@ -8,7 +8,8 @@
 }
 
 #top-heading {
-  font-size: 2.25rem;
+  text-align: center;
+  font-size: clamp(2rem, 6vw, 3rem);
   padding-block: 3rem;
   position: relative;
   text-shadow: 2px 1px 15px rgba(hotpink, 75%);
