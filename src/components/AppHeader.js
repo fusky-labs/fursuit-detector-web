@@ -1,6 +1,6 @@
 function AppHeader() {
   return(
-    <h1>YOLOv4 Fursuit Detector</h1>
+    <h1 id="top-heading">YOLOv4 Fursuit Detector</h1>
   )
 }
 
