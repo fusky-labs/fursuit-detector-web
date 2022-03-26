@@ -1,32 +1,37 @@
-# YOLOv4 Fursuit Detector
+# Fursuit Detector
 
-Detects fursuits images: basically garbage-in garbage-out kinda thing...
+Detects fursuits and stuff, I guess
 
-## Project Structure
+Created using Next.js with TypeScript, Flask, and PyTorch for the AI stuff.
 
-The project is comprised of both of a Flask app for the back-end and a React
-app for the front-end.
+## Project structure
 
-**Technologies used:**
+- `client` - Next.js app
+- `tool` - AI stuff required to detect pictures
 
-- React
-- PyTorch
-- Flask
+Some of the AI stuff doesn't like it when it's placed on it's
+own folder - and most of the back-end is on the root directory.
 
-## Installation
+## Get it up and running locally
 
-For or clone this repository, then install it:
+Clone this repo, cd into the `client` folder and install it:
 
 ```sh
-npm install
-# or
+# cd from client
+cd client
+
+# Install that baby
 npm i
+
+# or install via yarn
+yarn install
 ```
 
-Then, run a local dev server on your device with:
+Then, start a local dev server by running:
 
 ```sh
-npm run start
-```
+npm run dev
 
-And be amazed! ~~no not really~~
+# or install via yarn
+yarn dev
+```
