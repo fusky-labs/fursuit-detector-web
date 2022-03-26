@@ -30,7 +30,7 @@ def detect():
         image = cv2.imdecode(image, cv2.IMREAD_COLOR)
         boxes = do_detect(model_pt, cv2.resize(image, (416, 416)), 0.5, 0.4, use_cuda=False)
         print(boxes[0])
-        plot_boxes_cv2(image, boxes[0], f'../build/static/{session}.png', class_names=load_class_names('obj.names'))
+        plot_boxes_cv2(image, boxes[0], f'build/static/{session}.png', class_names=['furry'])
         print(image.shape)
         return jsonify({
             "status":"success",
