@@ -14,7 +14,7 @@ own folder - and most of the back-end is on the root directory.
 
 ## Get it up and running locally
 
-Clone this repo, cd into the `client` folder and install it:
+Clone this repo, cd into the `client` folder and install it via npm or yarn:
 
 ```sh
 # cd from client
