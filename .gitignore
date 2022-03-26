@@ -28,3 +28,7 @@ client/.env*.local
 
 # vercel
 client/.vercel
+
+venv
+tool/__pycache__
+yolov4-pytorch.pth
