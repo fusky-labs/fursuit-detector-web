@@ -3,4 +3,3 @@ torch==1.11.0+cpu
 Flask
 opencv-python
 Flask-Cors
-© 2022 GitHub, Inc.
