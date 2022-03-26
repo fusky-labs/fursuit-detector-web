@@ -2,15 +2,21 @@
 
 Detects fursuits and stuff, I guess
 
-Created using Next.js with TypeScript, Flask, and PyTorch for the AI stuff.
+## Technologies used
+
+<img src="https://skillicons.dev/icons?i=nextjs" width="30">
+<img src="https://skillicons.dev/icons?i=ts" width="30">
+<img src="https://skillicons.dev/icons?i=py" width="30">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg" width="25">
+<img src="https://raw.githubusercontent.com/github/explore/main/topics/flask/flask.png" width="30">
+
+Created using Next.js with TypeScript for the front-end -- while Flask
+and PyTorch for the back-end and AI stuff.
 
 ## Project structure
 
 - `client` - Next.js app
 - `tool` - AI stuff required to detect pictures
-
-Some of the AI stuff doesn't like it when it's placed on it's
-own folder - and most of the back-end is on the root directory.
 
 ## Get it up and running locally
 
