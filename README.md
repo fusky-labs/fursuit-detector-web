@@ -14,14 +14,24 @@ own folder - and most of the back-end is on the root directory.
 
 ## Get it up and running locally
 
-Clone this repo, and install it with yarn:
+Clone this repo, cd into the `client` folder and install it:
 
 ```sh
+# cd from client
+cd client
+
+# Install that baby
+npm i
+
+# or install via yarn
 yarn install
 ```
 
 Then, start a local dev server by running:
 
-```sg
+```sh
+npm run dev
+
+# or install via yarn
 yarn dev
 ```
