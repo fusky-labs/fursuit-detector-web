@@ -28,3 +28,6 @@ client/.env*.local
 
 # vercel
 client/.vercel
+
+venv
+tool/__pycache__
