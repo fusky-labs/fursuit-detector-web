@@ -1,7 +1,6 @@
-
 <h1 align="center">Fursuit Detector</h1>
 
-Detects fursuit pictures via PyTorch! (Video support coming soon on a diffrent up coming repo)
+Detects fursuit pictures via PyTorch!
 
 <p align="center">
   <a href="https://youtu.be/hx_wx0s2dUE">
@@ -13,7 +12,6 @@ Detects fursuit pictures via PyTorch! (Video support coming soon on a diffrent u
 - **Original video used to test the model:** [Furrydelphia 2019 Fursuit Parade](https://youtu.be/U3ieglNOiQg)
 
 ## Technologies used
-
 
 <img src="https://skillicons.dev/icons?i=nextjs" width="30">&nbsp;<img src="https://skillicons.dev/icons?i=ts" width="30">&nbsp;<img src="https://skillicons.dev/icons?i=py" width="30">&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg" width="25">&nbsp;<img src="https://raw.githubusercontent.com/github/explore/main/topics/flask/flask.png" width="30">
 
@@ -27,19 +25,22 @@ and PyTorch for the back-end, API, and AI stuff.
 
 ## Get it up and running
 
-> You'll need an up-to-date version of both Node and Python to properly
-> get it up and running.
+> You'll need an up-to-date version of both Node (at least v16.x) and Python (at least v3.9)
+> to properly get it up and running.
 
-Fork and clone the repo, instead of installing Node and Python libraries yourselve, we have a Bash script set up for you! Just simply run:
+Fork and clone the repo, instead of installing Node and Python libraries yourselves,
+we have a Bash script set up for you! Just simply run:
 
 ```sh
 sh install.sh
 ```
 
-The bash script installs the Python packages first in the `requirements.txt`
+The script installs the Python packages first in the `requirements.txt`
 file, then installs Next.js dependencies next.
 
-There is not an easy solution to run both servers in one, instead:
+There is not an easy solution to run both servers all at once (we're figuring it out
+because we're stupid), you'll have to run them seperately in their own instance:
+
 ```sh
 # Run the local Next.js server
 npm --prefix ./client run dev
@@ -51,8 +52,9 @@ yarn --cwd ./client run dev
 py server-api.py
 ```
 
-It doesn't matter if you start the Python server then Next.js, or vice versa;
+It doesn't matter if you start the Python server first then Next.js after, or vice versa;
 as long as both servers are up and running, you're good to go!
 
 ----
+
 <small><b>© 2021-22, created by thatITfox & skepfusky, MIT license</b></small>
