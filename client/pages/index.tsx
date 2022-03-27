@@ -10,6 +10,8 @@ const Home: NextPage = () => {
     console.log(acceptedFiles)
   }, []);
 
+  const [numberOfFurs, setNumberOfFurs] = useState(0);
+
   const handleSubmit = (e: any) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -19,7 +21,10 @@ const Home: NextPage = () => {
         method: 'POST',
         body: formData
       }).then(resp => {
-        resp.json().then(data => {console.log(data)});
+        resp.json().then(data => {
+          console.log(data)
+          setNumberOfFurs(data.numberOfFurs);
+        })
       })
     }
     Upload();
@@ -35,7 +40,7 @@ const Home: NextPage = () => {
       <div id="formContainer">
         <div {...getRootProps()}>
           <div className="dropzone-input" {...getInputProps()}>
-            { isDragActive ? (
+            {isDragActive ? (
               <p>Let it go, let it go</p>
             ) : (
               <p>Drop some files</p>
@@ -47,8 +52,9 @@ const Home: NextPage = () => {
           <input type="submit" value="Upload"/>
         </form> */}
       </div>
+      <p>number of furries in the image: {numberOfFurs}</p>
     </div>
-  )
+  );
 }
 
 export default Home;
