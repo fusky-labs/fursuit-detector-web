@@ -1,10 +1,17 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
+import { useDropzone } from 'react-dropzone'
 
 const Home: NextPage = () => {
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop, accept, multiple: false })
+
+  const onDrop = useCallback(acceptedFiles => {
+    console.log(acceptedFiles)
+  }, []);
+
   const handleSubmit = (e: any) => {
-    e.preventDefault()
+    e.preventDefault();
     const formData = new FormData(e.target);
     
     const Upload = async() => {
@@ -12,11 +19,12 @@ const Home: NextPage = () => {
         method: 'POST',
         body: formData
       }).then(resp => {
-        resp.json().then(data => {console.log(data)})
+        resp.json().then(data => {console.log(data)});
       })
     }
     Upload();
   }
+
   return (
     <div>
       <Head>
@@ -25,10 +33,19 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div id="formContainer">
-        <form onSubmit={handleSubmit}>
+        <div {...getRootProps()}>
+          <div className="dropzone-input" {...getInputProps()}>
+            { isDragActive ? (
+              <p>Let it go, let it go</p>
+            ) : (
+              <p>Drop some files</p>
+            )}
+          </div>
+        </div>
+        {/* <form onSubmit={handleSubmit}>
           <input type="file" name="image" id='image'/>
           <input type="submit" value="Upload"/>
-        </form>
+        </form> */}
       </div>
     </div>
   )
