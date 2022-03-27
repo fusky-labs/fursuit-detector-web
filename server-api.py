@@ -30,13 +30,20 @@ def detect():
         image = cv2.imdecode(image, cv2.IMREAD_COLOR)
         boxes = do_detect(model_pt, cv2.resize(image, (416, 416)), 0.5, 0.4, use_cuda=False)
         print(boxes[0])
-        plot_boxes_cv2(image, boxes[0], class_names=['furry'])
+        plot_boxes_cv2(image, boxes[0], f"client/.next/static/{session}.png", class_names=['furry'])
         print(image.shape)
         return jsonify({
             "status":"success",
             "session": session,
             "furries": len(boxes[0])
         })
+
+@app.route("delete/<session>")
+def delete(session):
+    os.remove(f"client/.next/static/{session}.png")
+    return jsonify({
+        "status":"success"
+    })
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=True)
