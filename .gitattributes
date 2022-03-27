@@ -2,4 +2,5 @@
 * text=auto
 
 # Detect .tsx files as TypeScript files
+*.tsx linguist-detectable=true
 *.tsx linguist-language=TypeScript
