@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.scss';
 import { useState } from 'react';
 
 const Home: NextPage = () => {
+  const [numberoffurries, setNumberoffurries] = useState(0);
   const handleSubmit = (e: any) => {
     e.preventDefault()
     const formData = new FormData(e.target);
@@ -13,7 +14,10 @@ const Home: NextPage = () => {
         method: 'POST',
         body: formData
       }).then(resp => {
-        resp.json().then(data => {console.log(data)})
+        resp.json().then(data => {
+          console.log(data)
+          setNumberoffurries(data.numberoffurries)
+        })
       })
     }
     Upload();
@@ -31,6 +35,7 @@ const Home: NextPage = () => {
           <input type="submit" value="Upload"/>
         </form>
       </div>
+      <p>number of furries in the image: {numberoffurries}</p>
     </div>
   )
 }
