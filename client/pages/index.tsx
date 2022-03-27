@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.scss';
 import { useState } from 'react';
 
 const Home: NextPage = () => {
-  const handleSubmit = (e:any) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault()
     const formData = new FormData(e.target);
     
