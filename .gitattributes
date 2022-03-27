@@ -1,0 +1,5 @@
+# Set default behavior to automatically normalize line endings.
+* text=auto
+
+# Detect .tsx files as TypeScript files
+*.tsx linguist-language=TypeScript
