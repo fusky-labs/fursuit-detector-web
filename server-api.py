@@ -38,7 +38,7 @@ def detect():
             "furries": len(boxes[0])
         })
 
-@app.route("delete/<session>")
+@app.route("/delete/<session>")
 def delete(session):
     os.remove(f"client/.next/static/{session}.png")
     return jsonify({
