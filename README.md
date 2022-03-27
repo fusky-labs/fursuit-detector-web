@@ -1,7 +1,7 @@
 
 <h1 align="center">Fursuit Detector</h1>
 
-Detects fursuit pictures via PyTorch! (Video support coming soon)
+Detects fursuit pictures via PyTorch! (Video support coming soon on a diffrent up coming repo)
 
 <p align="center">
   <a href="https://youtu.be/hx_wx0s2dUE">
