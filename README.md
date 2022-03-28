@@ -28,22 +28,16 @@ and PyTorch for the back-end, API, and AI stuff.
 > You'll need an up-to-date version of both Node (at least v16.x) and Python (at least v3.9)
 > to properly get it up and running.
 
-Fork and clone the repo, instead of installing Node and Python libraries yourselves,
-we have a Bash script set up for you! Just simply run:
+Fork and clone the repo, and simply run:
 
 ```sh
-sh install.sh
+npm run init
 ```
-
-The script installs the Python packages first in the `requirements.txt`
-file, then installs Next.js dependencies next.
 
 Then finally, run both Node and Python dev servers by simply running:
 
 ```sh
 npm run dev
-# or via yarn
-yarn dev
 ```
 
 ----
