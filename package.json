@@ -1,20 +1,29 @@
 {
-  "name": "fursuit-detector",
-  "version": "1.0.0",
-  "description": "Yes",
-  "repository": {
-    "url": "https://github.com/OpenFurs/Fursuit-Detector"
-  },
+  "name": "fursuit-detector-ts",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "init": "sh ./scripts/install.sh && exit 1",
-    "dev": "concurrently \"npm run dev:py\" \"npm run dev:next\" && exit 1",
-    "dev:next": "yarn --cwd ./client run dev",
-    "dev:py": "py server-api.py"
+    "dev": "concurrently \"npm run api\" \"npm run dev:next\"",
+    "api": "py server-api.py",
+    "dev:next": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "next": "12.1.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-dropzone": "^12.0.4",
+    "sass": "^1.49.9"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.23",
+    "@types/react": "17.0.43",
+    "@types/react-dom": "17.0.14",
+    "eslint": "8.12.0",
+    "eslint-config-next": "12.1.1",
+    "typescript": "4.6.3",
     "concurrently": "^7.0.0"
   }
 }
