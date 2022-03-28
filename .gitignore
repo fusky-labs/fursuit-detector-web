@@ -1,3 +1,5 @@
+node_modules/
+
 # dependencies
 client/node_modules
 client/.pnp
@@ -29,6 +31,7 @@ client/.env*.local
 # vercel
 client/.vercel
 
+# python
 venv
 tool/__pycache__
 yolov4-pytorch.pth

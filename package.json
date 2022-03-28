@@ -1,0 +1,20 @@
+{
+  "name": "fursuit-detector",
+  "version": "1.0.0",
+  "description": "Yes",
+  "repository": {
+    "url": "https://github.com/OpenFurs/Fursuit-Detector"
+  },
+  "scripts": {
+    "init": "sh ./scripts/install.sh && exit 1",
+    "dev": "concurrently \"npm run dev:py\" \"npm run dev:next\" && exit 1",
+    "dev:next": "yarn --cwd ./client run dev",
+    "dev:py": "py server-api.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  }
+}

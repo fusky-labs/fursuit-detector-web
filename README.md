@@ -38,22 +38,13 @@ sh install.sh
 The script installs the Python packages first in the `requirements.txt`
 file, then installs Next.js dependencies next.
 
-There is not an easy solution to run both servers all at once (we're figuring it out
-because we're stupid), you'll have to run them seperately in their own instance:
+Then finally, run both Node and Python dev servers by simply running:
 
 ```sh
-# Run the local Next.js server
-npm --prefix ./client run dev
-
+npm run dev
 # or via yarn
-yarn --cwd ./client run dev
-
-# Then run the back-end Python server
-py server-api.py
+yarn dev
 ```
-
-It doesn't matter if you start the Python server first then Next.js after, or vice versa;
-as long as both servers are up and running, you're good to go!
 
 ----
 
