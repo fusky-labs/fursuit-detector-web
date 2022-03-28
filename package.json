@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"npm run api\" \"npm run dev:next\"",
+    "dev": "concurrently -n \"python,nextjs\" \"npm run api\" \"npm run dev:next\"",
     "api": "py server-api.py",
     "dev:next": "next dev",
     "build": "next build",
