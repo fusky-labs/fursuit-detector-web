@@ -4,7 +4,7 @@ import { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone'
 
 const Home: NextPage = () => {
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop, accept, multiple: false })
+  // const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop, accept, multiple: false })
 
   const onDrop = useCallback(acceptedFiles => {
     console.log(acceptedFiles)
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div id="formContainer">
-        <div {...getRootProps()}>
+        {/* <div {...getRootProps()}>
           <div className="dropzone-input" {...getInputProps()}>
             {isDragActive ? (
               <p>Let it go, let it go</p>
@@ -46,11 +46,11 @@ const Home: NextPage = () => {
               <p>Drop some files</p>
             )}
           </div>
-        </div>
-        {/* <form onSubmit={handleSubmit}>
+        </div> */}
+        <form onSubmit={handleSubmit}>
           <input type="file" name="image" id='image'/>
           <input type="submit" value="Upload"/>
-        </form> */}
+        </form>
       </div>
       <p>number of furries in the image: {numberOfFurs}</p>
     </div>
