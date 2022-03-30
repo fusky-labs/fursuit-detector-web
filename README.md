@@ -4,7 +4,7 @@ Detects fursuit pictures via PyTorch!
 
 <p align="center">
   <a href="https://youtu.be/hx_wx0s2dUE">
-    <img src="https://github.com/OpenFurs/Fursuit-Detector/blob/main/fursuit-detection-demo.gif?raw=true">
+    <img src="https://github.com/OpenFurs/fursuit-detector-web/blob/main/fursuit-detection-demo.gif?raw=true">
   </a>
 </p>
 
