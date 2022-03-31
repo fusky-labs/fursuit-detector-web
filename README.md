@@ -10,7 +10,7 @@ Detects fursuit pictures via PyTorch!
 
 - **Full video:** [Fursuit detection AI version 1.0](https://youtu.be/hx_wx0s2dUE)
 - **Original video used to test the model:** [Furrydelphia 2019 Fursuit Parade](https://youtu.be/U3ieglNOiQg)
-- **Tools to run the AI created originialy by Tianxiaomo on the repo** [yolov4-pytorch](https://github.com/Tianxiaomo/pytorch-YOLOv4)
+- **Tools to run the AI created originally by [Tianxiaomo](https://github.com/Tianxiaomo/pytorch-YOLOv4)**
 
 ## Technologies used
 
