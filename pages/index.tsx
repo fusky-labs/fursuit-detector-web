@@ -1,9 +1,8 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone'
 
-const Home: NextPage = () => {
+export default function Home() {
   // const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop, accept, multiple: false })
 
   const onDrop = useCallback(acceptedFiles => {
@@ -56,5 +55,3 @@ const Home: NextPage = () => {
     </div>
   );
 }
-
-export default Home;
