@@ -12,9 +12,9 @@ Detects fursuit pictures via PyTorch!
 - **Original video used to test the model:** [Furrydelphia 2019 Fursuit Parade](https://youtu.be/U3ieglNOiQg)
 - **Tools to run the AI created originally by [Tianxiaomo](https://github.com/Tianxiaomo/pytorch-YOLOv4)**
 
-## Technologies used
+## Stack
 
-<img src="https://skillicons.dev/icons?i=nextjs" width="30">&nbsp;<img src="https://skillicons.dev/icons?i=ts" width="30">&nbsp;<img src="https://skillicons.dev/icons?i=py" width="30">&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg" width="25">&nbsp;<img src="https://raw.githubusercontent.com/github/explore/main/topics/flask/flask.png" width="30">
+<img src="https://skillicons.dev/icons?i=nextjs,ts,py,flask,pytorch">
 
 Created using Next.js + TypeScript for the front-end -- while Flask for the back-end, and PyTorch for handling the AI.
 
